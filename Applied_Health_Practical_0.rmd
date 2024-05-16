@@ -1,13 +1,22 @@
 ---
 output: 
   html_document: 
+<<<<<<< HEAD
     highlight: tango
     theme: readable
+=======
+    fig_width: 9
+    fig_height: 7
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 ---
 ## YAML
 ---
 author: "Chinny90"
+<<<<<<< HEAD
 title: "Applied_Health_Practicals0"
+=======
+title: "Applied_Health_Practicals"
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 output: html_document
 date: "2024-05-10"
 ---
@@ -19,7 +28,10 @@ library(datasauRus)
 ```
 
 **1. Based on the help file, how many rows and how many columns does the `datasaurus_dozen` file have? What are the variables included in the data frame? (this can be hardcoded)**
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 A data frame with 1846 rows and 3 columns. The variables included are;
 a. dataset indicating which dataset the data are from
 b. x: x-values
@@ -59,7 +71,11 @@ star_data <- datasaurus_dozen %>%
 
 ```
 
+<<<<<<< HEAD
 ```{r star, fig.height=3, fig.width=5}
+=======
+```{r}
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 ggplot(data = star_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
@@ -67,16 +83,23 @@ ggplot(data = star_data, mapping = aes(x = x, y = y)) +
 star_data %>%
   summarize(r = cor(x, y))
 ```
+<<<<<<< HEAD
 The r of "dino" is -0.06447185	while the r of "star" is -0.0629611	. The value of r of star is identical to r of dino in that for the both structures, there is a very weak inverse linear relationship between the variables x and y for both datasets. The correlation values does not entirely indicate that they are of different structures because the values are both negative, nearly the same and so close to zero (0). This would mean that the degree of linear relationship between x and y in both the dino and star dataset is almost identical.
 
 
+=======
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 **4. Plot `y` vs. `x` for the `circle` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?**
 
 ```{r}
 datasaurus_dozen %>%
   count(dataset)
 ```
+<<<<<<< HEAD
 ```{r circle_dataset, fig.height=7, fig.width=9}
+=======
+```{r}
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
 
@@ -91,8 +114,11 @@ ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
 circle_data %>%
   summarize(r = cor(x, y))
 ```
+<<<<<<< HEAD
 The r of "dino" is -0.06447185 while the r of "circle" is -0.06834336. For both datasets, the correlation coefficient are very close. The negative values which are close to zero (0) for both datasets indicates a very weak inverse linear relationship between the variables x and y for each dataset. Though the correlation coefficients are nearly similar, the visuals generated are different. Hence correlation does not sufficiently describe a data.
 
+=======
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 **5. Finally, let's plot all datasets at once. In order to do this we will make use of facetting.**
 
 
@@ -108,8 +134,12 @@ ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
   theme(legend.position = "none")
 ```
 
+<<<<<<< HEAD
 ** use the `group_by` function to generate all correlation coefficients.**
 
+=======
+And we can use the `group_by` function to generate all correlation coefficients.
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 ```{r first-10-r, eval=FALSE}
 datasaurus_dozen %>%
   group_by(dataset) %>%
@@ -117,9 +147,15 @@ datasaurus_dozen %>%
 ```
 - **Resize your figures:** 
 
+<<<<<<< HEAD
 The dino, star and circle figures were reset. 
 
 
+=======
+Click on the gear icon in on top of the R Markdown document, and select "Output Options..." in the dropdown menu. In the pop up dialogue box go to the Figures tab and change the height and width of the figures, and hit OK when done. Then, knit your document and see how you like the new sizes. Change and knit again and again until you're happy with the figure sizes. Note that these values get saved in the YAML.
+
+You can also use different figure sizes for different figures. To do so click on the gear icon within the chunk where you want to make a change. Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`. You can change them by defining different values directly in your R Markdown document as well.
+>>>>>>> ffdce05e27cdec45aa069f55b77b5c4609b13675
 
 
 ```{r setup, include=FALSE}
