@@ -96,7 +96,7 @@ Let's make our life easier and filter down to 3 specialties: a diagonstic/lab, a
 
 ```{r} 
 filtered.data <- raw.data %>% dplyr::filter(medical_specialty %in% c("Orthopedic", "Radiology", "Surgery")) 
-print(filtered.data)
+#print(filtered.data)
 ```
 
 ## Text Processing
