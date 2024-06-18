@@ -50,26 +50,7 @@ To ensure that the required packages are available, we can install them using th
 
 Here is an example code snippet to install the required packages:
 you can uncomment the following code to install required packages
-```{r}
-#Install necessary packages
-install.packages("gridExtra")
-install.packages("jpeg")
-install.packages("imager")
-install.packages("magick")
 
-# Install Bioconductor package (if not already installed)
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-# Install EBImage package from Bioconductor
-BiocManager::install("EBImage")
-install.packages("abind")
-
-# Install torch, torchvision, and luz
-install.packages("torch")
-install.packages("torchvision")
-install.packages("luz")
-```
 
 ```{r}
 # load packages
